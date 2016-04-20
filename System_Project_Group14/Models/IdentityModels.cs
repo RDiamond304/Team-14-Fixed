@@ -34,7 +34,7 @@ namespace System_Project_Group14.Models
     {
         //TODO:  Add dbsets here, for instance there's one for books
         //Remember, Identity adds a db set for users, so you shouldn't add that one - you will get an error
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Industry> Industries { get; set; }
         public DbSet<Interview> Interviews { get; set; }

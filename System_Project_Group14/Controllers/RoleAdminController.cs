@@ -12,7 +12,7 @@ using System_Project_Group14.Models;
 
 namespace System_Project_Group14.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    
     public class RoleAdminController : Controller
     {
         //

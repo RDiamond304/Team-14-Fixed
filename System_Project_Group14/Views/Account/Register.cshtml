@@ -13,44 +13,33 @@
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(m => m.member.Email, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.user.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.member.Email, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.user.Email, new { @class = "form-control" })
         </div>
     </div>
     @*TODO: Add code for additional fields required for login*@
     <div class="form-group">
-        @Html.LabelFor(m => m.member.FirstName, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.user.FirstName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.member.FirstName, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.user.FirstName, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.member.LastName, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.user.LastName, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.member.LastName, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.user.LastName, new { @class = "form-control" })
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.member.PhoneNumber, new { @class = "col-md-2 control-label" })
+
+    @*<div class="form-group">
+        @Html.LabelFor(m => m.Appuser.Student.Major, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.member.PhoneNumber, new { @class = "form-control" })
+            @Html.EnumDropDownListFor(m => m.Appuser.Student.Major, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Appuser.Student.Major)
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.member.Major, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.EnumDropDownListFor(m => m.member.Major, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.member.Major)
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.member.OKToText, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.EditorFor(m => m.member.OKToText, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.member.OKToText)
-        </div>
-    </div>
+    </div>*@
+  
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
