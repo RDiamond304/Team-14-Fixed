@@ -17,7 +17,7 @@ namespace System_Project_Group14.Models
 
         //TODO: Put any additional fields that you need for your user here
         public virtual User Users { get; set; }
-
+        public String FirstName { get; set; }
         //This method allows you to create a new user
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<AppUser> manager)
         {

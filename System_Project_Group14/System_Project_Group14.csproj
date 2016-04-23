@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201604232049281_InitialSetup.Designer.cs">
       <DependentUpon>201604232049281_InitialSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604232128503_AddFirstName.cs" />
+    <Compile Include="Migrations\201604232128503_AddFirstName.Designer.cs">
+      <DependentUpon>201604232128503_AddFirstName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppliedStudents.cs" />
@@ -280,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604232049281_InitialSetup.resx">
       <DependentUpon>201604232049281_InitialSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604232128503_AddFirstName.resx">
+      <DependentUpon>201604232128503_AddFirstName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
