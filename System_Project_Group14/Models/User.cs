@@ -27,5 +27,6 @@ namespace System_Project_Group14.Models
 
         //Navigation Properties
         public virtual AppUser AppUsers { get; set; }
+        public virtual List<Company> Companies { get; set; }
     }
 }
