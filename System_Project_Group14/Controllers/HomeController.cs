@@ -26,13 +26,13 @@ namespace System_Project_Group14.Controllers
         public ActionResult Profile()
         {
             // Instantiate the ASP.NET Identity system
-            var manager = new UserManager<AppUser>(new UserStore<AppUser>(new MyDbContext()));
+            var manager = new UserManager<AppUser>(new UserStore<AppUser>(new AppDbContext()));
 
             // Get the current logged in User and look up the user in ASP.NET Identity
             var currentUser = manager.FindById(User.Identity.GetUserId());
 
             // Recover the profile information about the logged in user
-            ViewBag.FirstName = currentUser.FirstName;
+            ViewBag.FirstName = currentUser.Users.FirstName;
             ViewBag.LastName = currentUser.Users.LastName;
 
             return View();

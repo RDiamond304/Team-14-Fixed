@@ -17,12 +17,12 @@ namespace System_Project_Group14.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
-    public class MyDbContext : IdentityDbContext<MyUser>
-    {
-        public MyDbContext()
-            : base("DefaultConnection")
-        {
-        }
-        public System.Data.Entity.DbSet<MyUserInfo> MyUserInfo { get; set; }
-    }
+    //public class MyDbContext : IdentityDbContext<MyUser>
+    //{
+    //    public MyDbContext()
+    //        : base("DefaultConnection")
+    //    {
+    //    }
+    //    public System.Data.Entity.DbSet<MyUserInfo> MyUserInfo { get; set; }
+    //}
 }
