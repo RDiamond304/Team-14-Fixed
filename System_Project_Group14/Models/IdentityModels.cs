@@ -40,6 +40,8 @@ namespace System_Project_Group14.Models
         public DbSet<Interview> Interviews { get; set; }
         public DbSet<Position> Positions { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<MyUser> MyUsers { get; set; }
+        public DbSet<MyUserInfo> MyUserInfos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

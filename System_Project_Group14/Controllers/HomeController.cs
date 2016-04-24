@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System_Project_Group14.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Threading.Tasks;
+
 
 namespace System_Project_Group14.Controllers
 {
@@ -13,6 +20,21 @@ namespace System_Project_Group14.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Profile()
+        {
+            // Instantiate the ASP.NET Identity system
+            var manager = new UserManager<AppUser>(new UserStore<AppUser>(new MyDbContext()));
+
+            // Get the current logged in User and look up the user in ASP.NET Identity
+            var currentUser = manager.FindById(User.Identity.GetUserId());
+
+            // Recover the profile information about the logged in user
+            ViewBag.FirstName = currentUser.FirstName;
+            ViewBag.LastName = currentUser.Users.LastName;
+
             return View();
         }
 	}
