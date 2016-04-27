@@ -25,6 +25,8 @@ namespace System_Project_Group14.Models
         [EmailAddress(ErrorMessage = "Please enter a valid email address")]
         public String Email { get; set; }
 
+
+
         //Navigation Properties
         public virtual AppUser AppUsers { get; set; }
         public virtual List<Company> Companies { get; set; }

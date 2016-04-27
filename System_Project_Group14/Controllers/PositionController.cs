@@ -73,6 +73,20 @@ namespace System_Project_Group14.Controllers
             return View(position);
         }
 
+        //Get Position/Search
+        public ActionResult Search(string searchString)
+        {
+            var position = from m in db.Positions
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                position = position.Where(s => s.PositionTitle.Contains(searchString));
+            }
+
+            return View(position);
+        }
+
         // POST: /Position/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

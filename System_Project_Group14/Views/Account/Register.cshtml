@@ -32,13 +32,43 @@
         </div>
     </div>
 
-    @*<div class="form-group">
-        @Html.LabelFor(m => m.Appuser.Student.Major, new { @class = "col-md-2 control-label" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.student.Major, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.EnumDropDownListFor(m => m.Appuser.Student.Major, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Appuser.Student.Major)
+            @Html.EnumDropDownListFor(m => m.student.Major, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.student.Major)
         </div>
-    </div>*@
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.student.GradSemester, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(m => m.student.GradSemester, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.student.GradSemester)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.student.GradYear, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.student.GradYear, Enumerable.Range(2016, 11).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.student.StudentPosition, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(m => m.student.StudentPosition, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.student.StudentPosition)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.student.GPA, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.student.GPA, new { @class = "form-control" })
+        </div>
+    </div>
   
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })

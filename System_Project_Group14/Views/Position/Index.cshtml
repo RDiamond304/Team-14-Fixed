@@ -9,6 +9,11 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<p>
+    Position: @Html.DropDownList("Position", "All")
+    Title: @Html.TextBox("SearchString")
+    <input type="submit" value="Filter" />
+</p>
 <table class="table">
     <tr>
         <th>
