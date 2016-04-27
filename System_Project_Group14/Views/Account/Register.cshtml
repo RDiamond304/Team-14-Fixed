@@ -49,6 +49,13 @@
     </div>
     
     <div class="form-group">
+        @Html.LabelFor(m => m.student.GradYear, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(m => m.student.GradYear, Enumerable.Range(2016, 11).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
+        </div>
+    </div>
+    
+    <div class="form-group">
         @Html.LabelFor(m => m.student.StudentPosition, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.EnumDropDownListFor(m => m.student.StudentPosition, new { @class = "form-control" })

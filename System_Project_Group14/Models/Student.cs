@@ -25,11 +25,13 @@ namespace System_Project_Group14.Models
         public Major Major { get; set; }
 
         [Required(ErrorMessage = "Please select a graduating semester.")]
+        [Display(Name = "Graduating Semester")]
         [EnumDataType(typeof(GradSemester))]
         public GradSemester GradSemester {get; set;}
 
-        // Need drop down for graduation year
-        //[Required(ErrorMessage= "Please select a graduating year.")]
+        [Required(ErrorMessage = "Please enter a graduating year."), Range(2012.00, 2020.00, ErrorMessage = "Graduation year must be between 2012 and 2020.")]
+        [Display(Name = "Graduating Year")]
+        public Int32 GradYear { get; set; }
         
 
         [Required(ErrorMessage = "Please select a position type.")]

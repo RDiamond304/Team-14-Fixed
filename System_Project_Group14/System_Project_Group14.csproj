@@ -194,6 +194,7 @@
     <Compile Include="Controllers\PositionController.cs" />
     <Compile Include="Controllers\RoleAdminController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -213,6 +214,10 @@
     <Compile Include="Migrations\201604240502538_MyUserClass.cs" />
     <Compile Include="Migrations\201604240502538_MyUserClass.Designer.cs">
       <DependentUpon>201604240502538_MyUserClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604270302112_GradYear.cs" />
+    <Compile Include="Migrations\201604270302112_GradYear.Designer.cs">
+      <DependentUpon>201604270302112_GradYear.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -274,6 +279,11 @@
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -296,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604240502538_MyUserClass.resx">
       <DependentUpon>201604240502538_MyUserClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604270302112_GradYear.resx">
+      <DependentUpon>201604270302112_GradYear.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
