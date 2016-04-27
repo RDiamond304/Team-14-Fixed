@@ -92,13 +92,14 @@ namespace System_Project_Group14.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+
         }
 
        
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register()
+        public ActionResult Register(DateTime? LastLoginDate)
         {
             return View();
         }

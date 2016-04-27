@@ -44,6 +44,7 @@ namespace System_Project_Group14.Models
         //TODO:  Add any fields that you need for creating a new user
         //For example, first name
         public virtual User user { get; set; }
+        public virtual Student student { get; set; }
         
         //[Required]
         //[Display(Name = "First Name")]
