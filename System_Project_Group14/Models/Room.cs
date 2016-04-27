@@ -20,5 +20,7 @@ namespace System_Project_Group14.Models
         //Navigation Property
         public virtual List<InterviewRoomSchedule> InterviewRoomSchedules { get; set; }
 
+        //Hello
+
     }
 }
