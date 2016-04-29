@@ -16,8 +16,19 @@ namespace System_Project_Group14.Models
     {
 
         //TODO: Put any additional fields that you need for your user here
-        public virtual User Users { get; set; }
+        public virtual Student Students { get; set; }
+        
+        [Display(Name = "First Name")]
         public String FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public String LastName { get; set; }
+
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public String Email { get; set; }
+
+
         //This method allows you to create a new user
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<AppUser> manager)
         {
@@ -46,9 +57,9 @@ namespace System_Project_Group14.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<Student>()
                 .HasRequired(e => e.AppUsers)
-                .WithRequiredDependent(u => u.Users);
+                .WithRequiredDependent(u => u.Students);
         }
 
         //TODO: Make sure that your connection string name is correct here.

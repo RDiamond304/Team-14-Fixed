@@ -43,16 +43,21 @@ namespace System_Project_Group14.Models
 
         //TODO:  Add any fields that you need for creating a new user
         //For example, first name
-        public virtual User user { get; set; }
+        //public virtual User user { get; set; }
         public virtual Student student { get; set; }
         
         //[Required]
-        //[Display(Name = "First Name")]
-        //public string FName { get; set; }
+        [Display(Name = "First Name")]
+        public string FName { get; set; }
 
         //[Required]
-        //[Display(Name = "Last Name")]
-        //public string LName { get; set; }
+        [Display(Name = "Last Name")]
+        public string LName { get; set; }
+
+        //[Required]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
+        public String Email { get; set; }
 
         //[Required]
         //[Display(Name = "Phone Number")]

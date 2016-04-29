@@ -32,8 +32,8 @@ namespace System_Project_Group14.Controllers
             var currentUser = manager.FindById(User.Identity.GetUserId());
 
             // Recover the profile information about the logged in user
-            ViewBag.FirstName = currentUser.Users.FirstName;
-            ViewBag.LastName = currentUser.Users.LastName;
+            //ViewBag.FirstName = currentUser.Users.FirstName;
+            //ViewBag.LastName = currentUser.Users.LastName;
 
             return View();
         }

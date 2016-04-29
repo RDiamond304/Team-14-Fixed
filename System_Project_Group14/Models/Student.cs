@@ -44,7 +44,7 @@ namespace System_Project_Group14.Models
 
         //Navigation properties
         public virtual List<AppliedStudents> StudentsApplied { get; set; }
-
+        public virtual AppUser AppUsers { get; set; }
             
             
         }
